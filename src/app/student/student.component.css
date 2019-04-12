@@ -1,0 +1,24 @@
+table{
+    height: 100%;
+    width: 75%;
+    background-color: palegreen;
+    margin: 15px;
+    box-lines: blue;
+
+}
+table th{
+    color:black;
+    background-color: royalblue;
+    border:5px;
+}
+table tr:hover{
+    background-color:yellowgreen;
+
+}
+table td{
+   
+    color:black;
+}
+button{
+    margin: 10px;
+}

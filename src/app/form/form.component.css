@@ -1,0 +1,13 @@
+.has-error{
+    border-color: red !important;
+}
+.help-block {
+    color: red;
+}
+#gender{
+    width: 65%;
+    margin: 10px;
+}
+button{
+    margin:10px;
+}

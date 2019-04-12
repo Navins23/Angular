@@ -1,0 +1,111 @@
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()"class="admin-form" id="form">
+    <div class="pannel pannel-primary">
+    <div class="pannel-body">
+  
+    <div class="form-group"  >
+      <label class="col-sm-2 control-label" for="name"> Name:</label>
+      <div class="col-sm-8">
+      <input required id="name" type="text" formControlName="name" class="form-control" [ngClass]="{'has-error': form.get('name').invalid && (form.get('name').touched||error)}">
+      
+      <span class="help-block" *ngIf=" !form.get('name').valid && (form.get('name').touched||error)">
+          
+           <span *ngIf="form.get('name').errors.required">
+                 *Student's Name is required
+           </span>
+           <span *ngIf="form.get('name').errors.minlength">
+                 *name must have minlength 2.
+           </span> 
+           <span *ngIf="form.get('name').errors.maxlength">
+                 *name must have maxlength 10.
+           </span>  
+           <span *ngIf="form.get('name').errors.pattern">
+              *name must have only letters.
+        </span>             
+      </span>
+     
+       </div>
+    </div>
+    <div class="form-group" >
+     <label class="col-sm-2 control-label" for="email"> Email:</label>
+     <div class="col-sm-8">
+     <input required id="email" type="text" formControlName="email" class="form-control" [ngClass]="{'has-error': form.get('email').invalid && (form.get('email').touched||error)}">
+     <span class="help-block" *ngIf="!form.get('email').valid &&(form.get('email').touched||error)">
+       <span *ngIf="form.get('email').errors.required">
+          *Student's email is required,
+       </span>
+       <span *ngIf="form.get('email').errors.minlength">
+          *email must have minimum length 12.
+       </span>
+       <span *ngIf="form.get('email').errors.maxlength">
+           *email must have maximum length 15.
+        </span>
+      </span>
+      
+      </div>
+   </div>
+  
+    <div class="form-group">
+        <label class="col-sm-2 control-label" for="roll"> Roll.no:</label>
+        <div class="col-sm-8">
+        <input required id="roll" type="number" formControlName="roll" class="form-control" [ngClass]="{'has-error':form.get('roll').invalid && (form.get('roll').touched||error)}">
+        <span class="help-block" *ngIf="!form.get('roll').valid && (form.get('roll').touched||error)">
+              <span *ngIf="form.get('roll').errors.required">
+                 *Student's roll is required.
+              </span>
+              <span *ngIf="form.get('roll').errors.min">
+                 *Minimum roll must be 1.
+              </span>
+              <span *ngIf="form.get('roll').errors.max">
+                  *Maxinum roll must be 30.
+               </span>
+             </span>
+         </div>
+      </div>
+  
+        <div class="form-group">
+            <label class="col-sm-2 control-label" for="address"> Address:</label>
+            <div class="col-sm-8">
+            <input required id="address" type="text" formControlName="address" class="form-control" [ngClass]="{'has-error':form.get('address').invalid && (form.get('address').touched||error)}" >
+           
+          <span class="help-block"*ngIf="!form.get('address').valid && (form.get('address').touched||error) " >
+             
+              <span *ngIf="form.get('address').errors.required">
+                 *Student's address is required,
+              </span>
+              <span *ngIf="form.get('address').errors.minlength">
+                 *address must have minimum length 5.
+              </span>
+              <span *ngIf="form.get('address').errors.maxlength">
+                  *address must have maximum length 15.
+               </span>
+            
+             </span>
+            </div>
+        </div>
+  </div>
+  </div>
+  <button type="submit" >Submit</button>
+  
+  </form>
+  
+  {{form.value|json}}jnm  
+ 
+  <!--     <div class="form-group" formGroupName="gender">
+           <label>Gender:</label>
+           <div class="form-control">  
+              <label class="radio-inline">
+                 <input type="radio" value="male" name="gender">
+                 Male
+              </label>
+              <label class="radio-inline">
+                    <input type="radio" value="female" name="gender">
+                    Female
+                 </label>
+                 <label class="radio-inline">
+                       <input type="radio" value="others" name="gender">
+                       Others
+                    </label>
+  
+           </div>
+          </div> -->

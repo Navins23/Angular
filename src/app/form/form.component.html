@@ -14,10 +14,10 @@
                  *Student's Name is required
            </span>
            <span *ngIf="form.get('name').errors.minlength">
-                 *name must have minlength 3.
+                 *name must have minlength 2.
            </span> 
            <span *ngIf="form.get('name').errors.maxlength">
-                 *name must have maxlength 10.
+                 *name must have maxlength 8.
            </span>  
            <span *ngIf="form.get('name').errors.pattern">
               *name must have only letters.
@@ -57,7 +57,7 @@
                  *Minimum roll must be 1.
               </span>
               <span *ngIf="form.get('roll').errors.max">
-                  *Maxinum roll must be 30.
+                  *Maximum roll must be 30.
                </span>
              </span>
          </div>
@@ -89,23 +89,6 @@
   
   </form>
   
-  {{form.value|json}}jnm  
- 
-  <!--     <div class="form-group" formGroupName="gender">
-           <label>Gender:</label>
-           <div class="form-control">  
-              <label class="radio-inline">
-                 <input type="radio" value="male" name="gender">
-                 Male
-              </label>
-              <label class="radio-inline">
-                    <input type="radio" value="female" name="gender">
-                    Female
-                 </label>
-                 <label class="radio-inline">
-                       <input type="radio" value="others" name="gender">
-                       Others
-                    </label>
   
-           </div>
-          </div> -->
+ 
+ 

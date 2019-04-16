@@ -15,7 +15,7 @@ export class FormComponent implements OnInit {
   constructor(private fb:FormBuilder,private serv:StudentService) { }
   ngOnInit() {
     this.form=this.fb.group({
-      name:['',[Validators.required,Validators.minLength(3),Validators.maxLength(15),Validators.pattern('^[a-zA-Z\  \']+')]],
+      name:['',[Validators.required,Validators.minLength(2),Validators.maxLength(8),Validators.pattern('^[a-zA-Z\_\']+')]],
       email:['',[Validators.required,Validators.minLength(12),Validators.maxLength(15),Validators.email]],
       roll: ['',[Validators.required,Validators.min(1),Validators.max(30)]], 
       address:['',[Validators.required,Validators.minLength(5),Validators.maxLength(15)]]
